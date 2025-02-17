@@ -1,0 +1,65 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea, select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Error messages - Initially hidden */
+.error-message {
+    display: none;
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+/* Show error message only when the input is invalid */
+input:invalid + .error-message, textarea:invalid + .error-message {
+    display: block;
+}
+
+/* Restore valid (green) and invalid (red) styling */
+input:invalid, textarea:invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6; /* Light red background */
+}
+
+input:valid, textarea:valid {
+    border: 2px solid green;
+    background-color: #e6ffe6; /* Light green background */
+}
+
+/* Preferred Contact Method - Aligning Radio Buttons in One Line */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spacing between options */
+}
+
+.radio-group label {
+    margin: 0;
+}
+
+/* Responsive Design - Adjusting for Mobile Screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+}

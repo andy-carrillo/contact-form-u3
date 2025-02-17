@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <h2>Contact Us</h2>
+    
+    <!-- Contact Form -->
+    <form method="POST" action="#">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error-message">This field is required.</span>
+
+        <!-- Email Field with HTML5 validation -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message">Please enter a valid email.</span>
+
+        <!-- Phone Number Field (International format validation) -->
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="^\+?[0-9\s]{10,15}$" required 
+               placeholder="+1 650 123 1234" title="Enter a valid phone number, e.g., +1 650 123 1234">
+        <small class="error-message">⚠ Enter a valid phone number, e.g., +1 650 123 1234.</small>
+
+        <!-- Message Text Area -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <span class="error-message">This field is required.</span>
+
+        <!-- Preferred Contact Method (NOT REQUIRED) -->
+        <label>Preferred Contact Method:</label>
+        <div class="radio-group">
+            <input type="radio" name="contact_method" value="Email" id="email_contact"> 
+            <label for="email_contact">Email</label>
+
+            <input type="radio" name="contact_method" value="Phone" id="phone_contact"> 
+            <label for="phone_contact">Phone</label>
+
+            <input type="radio" name="contact_method" value="Both" id="both_contact"> 
+            <label for="both_contact">Both</label>
+        </div>
+
+        <!-- Inquiry Type (NOT REQUIRED) -->
+        <label for="inquiry_type">Inquiry Type:</label>
+        <select id="inquiry_type" name="inquiry_type">
+            <option value="">Select an option</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Support Request">Support Request</option>
+            <option value="Feedback">Feedback</option>
+        </select>
+
+        <!-- Preview Button (Uses GET method) -->
+        <button type="submit" formaction="#" formmethod="get">Preview</button>
+        <!-- Submit Button (Uses POST method) -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
