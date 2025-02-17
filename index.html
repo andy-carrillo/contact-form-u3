@@ -48,16 +48,19 @@
         <!-- Inquiry Type (NOT REQUIRED) -->
         <label for="inquiry_type">Inquiry Type:</label>
         <select id="inquiry_type" name="inquiry_type">
-            <option value="">Select an option</option>
+            <option value="" selected>Select an option</option>
             <option value="General Inquiry">General Inquiry</option>
             <option value="Support Request">Support Request</option>
             <option value="Feedback">Feedback</option>
         </select>
 
-        <!-- Preview Button (Uses GET method) -->
-        <button type="submit" formaction="#" formmethod="get">Preview</button>
-        <!-- Submit Button (Uses POST method) -->
-        <button type="submit">Submit</button>
+        <!-- Buttons -->
+        <button type="submit" formaction="#" formmethod="get" class="preview-btn">
+            Preview (GET - View in URL)
+        </button>
+        <button type="submit" class="submit-btn">
+            Submit (POST - Check Results: <a href="https://yopmail.com/?contact-form-u3" target="_blank">yopmail.com</a>)
+        </button>
     </form>
 </body>
 </html>
