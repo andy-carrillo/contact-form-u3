@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Form Data</title>
+</head>
+<body>
+    <h2>Form Data Preview</h2>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Phone:</strong> <span id="phone"></span></p>
+    <p><strong>Message:</strong> <span id="message"></span></p>
+    <p><strong>Preferred Contact Method:</strong> <span id="contact_method"></span></p>
+    <p><strong>Inquiry Type:</strong> <span id="inquiry_type"></span></p>
+
+    <script>
+        // Extract URL parameters and display them
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("name").textContent = params.get("name") || "Not provided";
+        document.getElementById("email").textContent = params.get("email") || "Not provided";
+        document.getElementById("phone").textContent = params.get("phone") || "Not provided";
+        document.getElementById("message").textContent = params.get("message") || "Not provided";
+        document.getElementById("contact_method").textContent = params.get("contact_method") || "Not provided";
+        document.getElementById("inquiry_type").textContent = params.get("inquiry_type") || "Not provided";
+    </script>
+</body>
+</html>
